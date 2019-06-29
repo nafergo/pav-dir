@@ -27,13 +27,14 @@ $(document).ready(function(){
   <body>
 	  
 <header>
-<div id="sorts" class="button-group">
-  <button class="button is-checked" data-sort-value="original-order">original order</button>
-  <button class="button" data-sort-value="name">name</button>
-  <button class="button" data-sort-value="symbol">symbol</button>
-  <button class="button" data-sort-value="number">number</button>
-  <button class="button" data-sort-value="weight">weight</button>
-  <button class="button" data-sort-value="category">category</button>
+	
+<div class="button-group filter-button-group">
+  <button data-filter="*">show all</button>
+  <button data-filter=".metal">metal</button>
+  <button data-filter=".transition">transition</button>
+  <button data-filter=".alkali, .alkaline-earth">alkali & alkaline-earth</button>
+  <button data-filter=":not(.transition)">not transition</button>
+  <button data-filter=".metal:not(.transition)">metal but not transition</button>
 </div>
 	  </header>	
 		  
@@ -41,44 +42,13 @@ $(document).ready(function(){
 <ul class="table-like">
     
   <li class="table-like__item">
-    <div class="name">Mercury</div>
-    <div class="symbol">Hg</div>
-    <div class="number">80</div>
-    <div class="weight">200.59</div>
+    <div class="metal">Mercury</div>
+    <div class="metal">Hg</div>
+    <div class="alkali">80</div>
+    <div class="transition">200.59</div>
     <div class="category">transition</div>
   </li>
 
-  <li class="table-like__item">
-    <div class="name">Tellurium</div>
-    <div class="symbol">Te</div>
-    <div class="number">52</div>
-    <div class="weight">127.6</div>
-    <div class="category">metalloid</div>
-  </li>
-
-  <li class="table-like__item">
-    <div class="name">Bismuth</div>
-    <div class="symbol">Bi</div>
-    <div class="number">83</div>
-    <div class="weight">208.980</div>
-    <div class="category">post-transition</div>
-  </li>
-
-  <li class="table-like__item">
-    <div class="name">Lead</div>
-    <div class="symbol">Pb</div>
-    <div class="number">82</div>
-    <div class="weight">207.2</div>
-    <div class="category">post-transition</div>
-  </li>
-
-  <li class="table-like__item">
-    <div class="name">Gold</div>
-    <div class="symbol">Au</div>
-    <div class="number">79</div>
-    <div class="weight">196.967</div>
-    <div class="category">transition</div>
-  </li>
 	
 	  </ul>
 	  
