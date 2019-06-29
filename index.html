@@ -17,7 +17,7 @@ $(document).ready(function(){
 <script id="item-template" type="text/x-handlebars-template">
 
 	{{#each this}}
-		<div class="grid-item" class="{{year}}"><img src="{{image}}" width="100px"><a href="{{url}}">{{title}}</a> <small>{{description}}</small> <strong>{{type}}</strong></div>
+		<div class="element-item'," class="{{year}}"><img src="{{image}}" width="100px"><a href="{{url}}">{{title}}</a> <small>{{description}}</small> <strong>{{type}}</strong></div>
 	{{/each}}
 
 </script>
@@ -30,7 +30,7 @@ $(document).ready(function(){
 	
 <div class="button-group filters-button-group">
   <button class="button is-checked" data-filter="*">show all</button>
-  <button class="button" data-filter=".metal">metal</button>
+  <button class="button" data-filter=".Presentation">present</button>
   <button class="button" data-filter=".transition">transition</button>
   <button class="button" data-filter=".alkali, .alkaline-earth">alkali and alkaline-earth</button>
   <button class="button" data-filter=":not(.transition)">not transition</button>
@@ -40,13 +40,13 @@ $(document).ready(function(){
 </div>
 
 <div class="grid">
-  <div class="element-item transition metal " data-category="transition">
+  <div class="element-item transition metal " data-category="Presentation">
     <h3 class="name">Mercury</h3>
     <p class="symbol">Hg</p>
     <p class="number">80</p>
     <p class="weight">200.59</p>
   </div>
-  <div class="element-item metalloid " data-category="metalloid">
+  <div class="element-item Presentation " data-category="metalloid">
     <h3 class="name">Tellurium</h3>
     <p class="symbol">Te</p>
     <p class="number">52</p>
