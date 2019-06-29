@@ -1,36 +1,111 @@
-<html>
-<head>
-<title>Archaeology software and resources</title>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+	        <title>Nelson Gonçalves – Freelance 3D generalist & Educator - Workshop</title>
+		<meta charset='utf-8'>
+		<script type="text/javascript" src="js/ICanHaz.js"></script>
+		<script type="text/javascript" src='js/jquery.js'></script>
+		<script type="text/javascript" src='js/site.js'></script>
+		<script type="text/javascript" src='js/tabletop1.3.4.js'></script>
+		<link rel="shortcut icon" href="https://nafergo.github.io/images/favicon.ico"/>
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link media="screen" rel="stylesheet" type="text/css" href="css/site.css">
+
+		    <link rel="stylesheet" type="text/css" href="https://nafergo.github.io/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Source+Sans+Pro" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="https://nafergo.github.io/nafergostyle.css" />
 		
-	
-<script type="text/javascript">
-$(document).ready(function(){
-	$.getJSON('https://api.sheety.co/41f19476-681c-4cf7-9581-2093cfc00e97', function(data) {
-		var template = Handlebars.compile($('#item-template').html())
-		$('#items').html(template(data))
-	})
-})
-</script>
-<script id="item-template" type="text/x-handlebars-template">
+		</head>
+	<body>
 
-	{{#each this}}
-		<div class="element-item'," class="{{year}}"><img src="{{image}}" width="100px"><a href="{{url}}">{{title}}</a> <small>{{description}}</small> <strong>{{type}}</strong></div>
-	{{/each}}
+		
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="https://nafergo.github.io/" class="site-avatar"><img src="https://avatars1.githubusercontent.com/u/6432502?s=460&v=4" /></a>
 
-</script>
-</head>
+          <div class="site-info">
+            <h1 class="site-name"><a href="https://nafergo.github.io/">Nelson Gonçalves</a></h1>
+            <p class="site-description">Freelance 3D generalist & Educator</p>
+          </div>
 
-  
-  <body>
-	  
-<header>
-		  
-	  
-	  
-		  
-		  <div id="items">Loading theme parks...</div>
-	
-  </body>
-</html
+          <nav>
+            <a href="https://nafergo.github.io/">Blog</a>
+            <a href="https://nafergo.github.io/workshop/">Workshop
+            <a href="https://nafergo.github.io/about">About Me</a>
+          </nav>
+        </header>
+      </div>
+    </div>		
+		
+		<!--
+		<header class="container">
+			<h1>Workshop</h1>
+			<ul class="nav">
+				<li>Projects developed by <a href="https://nafergo.github.io/">me</a> or with my collaboration</li>
+			</ul>
+		</header>
+-->
+		<div id="filters" class="container">
+			<input id="toolSearch" type="search" placeholder="project name.."></input>
+			<span class="clear sml-button">Clear</span>
+			<span id="showAvailable" class="sml-button">Show WiP</span>
+		</div>
+		<div id="tools" class="container"><span class="flash animated">LOADING...</span></div>
+		<div id="info" class="container">
+				<div class="span1">
+					<h4>CONTRIBUTE TO THIS LIBRARY</h4>
+					<p>The sitez
+					</p>
+
+				</div>
+
+				<div class="span1">
+					<h4>START YOUR OWN</h4>
+					<p>The sitez
+					</p>
+
+			
+				</div>
+		</div>
+
+		<script id="tools" type="text/html">
+		{{#rows}}
+		<div id="{{rowNumber}}" class="tool-box {{#checkedout}}not-{{/checkedout}}available">
+			<span class="tool-box-tool">{{#image}}<img src="{{image}}"  style="object-fit:cover;width:100%;height:50px">{{/image}}</span>
+			<div class="tool-box-bottom {{rowNumber}}">
+				{{#checkedout}}<span class="tool-box-borrowed">Completed</span>{{/checkedout}}
+				{{^checkedout}}<span class="tool-box-inprogress">In progress</span>{{/checkedout}}
+				<ul>
+					<li><h4>{{name}}</h4></li>
+					<li><small>CLIENT </small><a href="{{clienturl}}">{{client}}</a></li>
+					<li><small>YEAR </small>{{year}}</li>					
+					<li><img src="{{image}}" width="100%"></li>
+					{{#tooldetails}}
+					<li><small>NOTES : </small>{{tooldetails}}</li>
+					{{/tooldetails}}					
+					{{#location}}
+					<li style="float:right;"><small></small><a href="{{location}}" target="_blank"><small><i class="material-icons">place</i></small></a>   
+					{{/location}}
+					{{#moreurl}}
+					<small><a href="{{moreurl}}"><i class="material-icons">link</i></a></small></li>
+					{{/moreurl}}
+					
+										
+				</ul>
+			</div>
+		</div>
+		{{/rows}}
+		</script>
+
+		<script type="text/javascript">
+		  document.addEventListener('DOMContentLoaded', function() {
+	      var URL = "1AqkYsayQzoLmPQJTcKcAW9HeYMq4oSzpD7uNunufNHs"
+	      Tabletop.init( { key: URL, callback: initialize, simpleSheet: true } )
+	    })
+		</script>
+	</body>
+</html>
+
+
