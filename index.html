@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<html lang="en">
 		<head>
-	        <title>Nelson Gonçalves – Freelance 3D generalist & Educator - Workshop</title>
+	        <title>Archaeology software</title>
 		<meta charset='utf-8'>
 		<script type="text/javascript" src="js/ICanHaz.js"></script>
 		<script type="text/javascript" src='js/jquery.js'></script>
@@ -19,40 +19,24 @@
 		</head>
 	<body>
 
-		
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="https://nafergo.github.io/" class="site-avatar"><img src="https://avatars1.githubusercontent.com/u/6432502?s=460&v=4" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="https://nafergo.github.io/">Nelson Gonçalves</a></h1>
-            <p class="site-description">Freelance 3D generalist & Educator</p>
-          </div>
-
-          <nav>
-            <a href="https://nafergo.github.io/">Blog</a>
-            <a href="https://nafergo.github.io/workshop/">Workshop
-            <a href="https://nafergo.github.io/about">About Me</a>
-          </nav>
-        </header>
-      </div>
-    </div>		
-		
-		<!--
 		<header class="container">
 			<h1>Workshop</h1>
 			<ul class="nav">
 				<li>Projects developed by <a href="https://nafergo.github.io/">me</a> or with my collaboration</li>
 			</ul>
 		</header>
--->
+
+		
+		
+		
 		<div id="filters" class="container">
 			<input id="toolSearch" type="search" placeholder="project name.."></input>
 			<span class="clear sml-button">Clear</span>
 			<span id="showAvailable" class="sml-button">Show WiP</span>
 		</div>
 		<div id="tools" class="container"><span class="flash animated">LOADING...</span></div>
+		
+		
 		<div id="info" class="container">
 				<div class="span1">
 					<h4>CONTRIBUTE TO THIS LIBRARY</h4>
@@ -78,8 +62,7 @@
 				{{#checkedout}}<span class="tool-box-borrowed">Completed</span>{{/checkedout}}
 				{{^checkedout}}<span class="tool-box-inprogress">In progress</span>{{/checkedout}}
 				<ul>
-					<li><h4>{{name}}</h4></li>
-					<li><small>CLIENT </small><a href="{{clienturl}}">{{client}}</a></li>
+					<li><h4><a href="{{url}}">{{title}}</a></h4></li>
 					<li><small>YEAR </small>{{year}}</li>					
 					<li><img src="{{image}}" width="100%"></li>
 					{{#tooldetails}}
@@ -101,7 +84,7 @@
 
 		<script type="text/javascript">
 		  document.addEventListener('DOMContentLoaded', function() {
-	      var URL = "1AqkYsayQzoLmPQJTcKcAW9HeYMq4oSzpD7uNunufNHs"
+	      var URL = "1zcf8HFaI2WesW-NkawO0g6pSrg4B8R5uH1l8oMI0K-I"
 	      Tabletop.init( { key: URL, callback: initialize, simpleSheet: true } )
 	    })
 		</script>
