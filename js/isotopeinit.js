@@ -1,22 +1,22 @@
 // init Isotope
-var $grid = $('.grid').isotope({
-  itemSelector: '.grid-item'
+var $table = $('.table-like').isotope({
+  layoutMode: 'vertical',
+  getSortData: {
+    name: '.name',
+    symbol: '.symbol',
+    number: '.number parseInt',
+    category: '.category',
+    weight: function( itemElem ) {
+      var weight = $( itemElem ).find('.weight').text();
+      return parseFloat( weight.replace( /[\(\)]/g, '') );
+    }
+  }
 });
 
-// store filter for each group
-var filters = {};
-
-$('.filters').on( 'click', '.button', function() {
-  var $this = $(this);
-  // get group key
-  var $buttonGroup = $this.parents('.button-group');
-  var filterGroup = $buttonGroup.attr('data-filter-group');
-  // set filter for group
-  filters[ filterGroup ] = $this.attr('data-filter');
-  // combine filters
-  var filterValue = concatValues( filters );
-  // set filter for Isotope
-  $grid.isotope({ filter: filterValue });
+// bind sort button click
+$('#sorts').on( 'click', 'button', function() {
+  var sortValue = $(this).attr('data-sort-value');
+  $table.isotope({ sortBy: sortValue });
 });
 
 // change is-checked class on buttons
@@ -27,14 +27,3 @@ $('.button-group').each( function( i, buttonGroup ) {
     $( this ).addClass('is-checked');
   });
 });
-  
-// flatten object by concatting values
-function concatValues( obj ) {
-  var value = '';
-  for ( var prop in obj ) {
-    value += obj[ prop ];
-  }
-  return value;
-}
-
-
