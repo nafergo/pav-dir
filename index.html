@@ -17,7 +17,7 @@ $(document).ready(function(){
 <script id="item-template" type="text/x-handlebars-template">
 
 	{{#each this}}
-		<div class="card {{year}}"><img src="{{image}}" width="100px"><a href="{{url}}">{{title}}</a> <small>{{description}}</small> <strong>{{type}}</strong></div>
+		<div class="grid-item" class="{{year}}"><img src="{{image}}" width="100px"><a href="{{url}}">{{title}}</a> <small>{{description}}</small> <strong>{{type}}</strong></div>
 	{{/each}}
 
 </script>
@@ -37,8 +37,10 @@ $(document).ready(function(){
   </ol>
 	
 	  </header>	
-	  <div class="grid">
-<div id="items">Loading theme parks...</div>
+<div class="grid" data-isotope='{ "itemSelector": ".grid-item", "layoutMode": "fitRows" }'>
+		  
+		  
+		  <div id="items">Loading theme parks...</div>
 </div>
 	  
 
