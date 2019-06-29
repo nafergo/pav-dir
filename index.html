@@ -1,40 +1,28 @@
-
-<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Archaeoware</title>
-
-  <!--[if lt IE 9]> <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
-
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-
-  
-
-
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-
+<title>UK Theme Parks</title>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.getJSON('https://api.sheety.co/41f19476-681c-4cf7-9581-2093cfc00e97', function(data) {
+		var template = Handlebars.compile($('#item-template').html())
+		$('#items').html(template(data))
+	})
+})
+</script>
+<script id="item-template" type="text/x-handlebars-template">
+<ul>
+	{{#each this}}
+		<li><a href="{{url}}">{{title}}</a></li>
+	{{/each}}
+</ul>
+</script>
 </head>
 
-<body>
-
-
-<h4>TeamI</h4>
-<ol id="photogrammetry">
-  <script id="photogrammetry-template" type="text/x-handlebars-template">
-    <li><strong>{{cells.Title}}</strong>, {{cells.Type}}</li>
-  </script>
-</ol>
-
   
-  <!-- Load jQuery and Sheetrock from CDNJS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sheetrock/1.1.4/dist/sheetrock.min.js"></script>
-  
-  <!-- Load Handlebars.js from CloudFlare’s CDN. -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <body>
+<div id="items">Loading theme parks...</div>
 
-  <script src="js/init.js"></script>
-
-</body>
-</html>
+  </body>
+</html
