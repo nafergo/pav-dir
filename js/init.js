@@ -9,13 +9,13 @@
 var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1qT1LyvoAcb0HTsi2rHBltBVpUBumAUzT__rhMvrz5Rk/edit#gid=0';
 
 // Compile Handlebars template for team RBI leaders.
-var RBITemplate = Handlebars.compile($('#team-rbi-template').html());
+var PhotogrammetryTemplate = Handlebars.compile($('#photogrammetry-template').html());
 
 // Load top five team RBI leaders.
-$('#team-rbi').sheetrock({
+$('#photogrammetry').sheetrock({
   url: mySpreadsheet,
-  sql: "select A,sum(J) group by A order by sum(J) desc",
+  sql: "select A,E,N order by N desc",
   chunkSize: 5,
-  labels: ['TeamName', 'TeamRBI'],
-  rowHandler: RBITemplate
+  labels: ['Title', 'Photogrammetry'],
+  rowHandler: PhotogrammetryTemplate
 });
