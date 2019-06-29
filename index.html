@@ -27,17 +27,20 @@ $(document).ready(function(){
   <body>
 	  
 <header>
- <ol>
-      <li>YEAR</li>
-      <li><a href="#" data-filter="">any</a></li>
-      <li><a href="#" data-filter=".2016">2016</a></li>
-      <li><a href="#" data-filter=".2017">2017</a></li>
-      <li><a href="#" data-filter=".2018">2018</a></li>
-    
-  </ol>
+  <div class="ui-group">
+    <div class="button-group js-radio-button-group" data-filter-group="size">
+      <button class="disabled button waves-effect waves-light btn-flat">YEAR</button>
+      <button class="button waves-effect waves-light btn-flat is-checked" data-filter="">any</button>
+      <button class="button waves-effect waves-light btn-flat" data-filter=".2016">2016</button>
+      <button class="button waves-effect waves-light btn-flat" data-filter=".2017">2017</button>
+      <button class="button waves-effect waves-light btn-flat" data-filter=".2018">2018</button>
+    </div>
+  </div>
+	
+	
 	
 	  </header>	
-<div class="grid" data-isotope='{ "itemSelector": ".grid-item", "layoutMode": "fitRows" }'>
+<div class="grid">
 		  
 		  
 		  <div id="items">Loading theme parks...</div>
