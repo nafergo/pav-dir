@@ -1,13 +1,21 @@
-// Sheetrock.js 1.0 Example 1
+// Sheetrock.js 1.0 Example 4
 // https://chriszarate.github.io/sheetrock/
 
-// The most basic use case of Sheetrock simply fetches the an 
-// entire worksheet and loads it into a <table>.
+// Let’s group some data. For a more straightforward template, we’ll 
+// specify the labels we want Sheetrock to use when it returns the 
+// data using the labels option.
 
 // Define spreadsheet URL.
-var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1zcf8HFaI2WesW-NkawO0g6pSrg4B8R5uH1l8oMI0K-I/edit#gid=0';
+var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1qT1LyvoAcb0HTsi2rHBltBVpUBumAUzT__rhMvrz5Rk/edit#gid=0';
 
-// Load an entire worksheet.
-$('#statistics').sheetrock({
-  url: mySpreadsheet
+// Compile Handlebars template for team RBI leaders.
+var RBITemplate = Handlebars.compile($('#team-rbi-template').html());
+
+// Load top five team RBI leaders.
+$('#team-rbi').sheetrock({
+  url: mySpreadsheet,
+  sql: "select A,sum(J) group by A order by sum(J) desc",
+  chunkSize: 5,
+  labels: ['TeamName', 'TeamRBI'],
+  rowHandler: RBITemplate
 });
