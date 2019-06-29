@@ -12,11 +12,11 @@ $(document).ready(function(){
 })
 </script>
 <script id="item-template" type="text/x-handlebars-template">
-<ul>
+
 	{{#each this}}
-		<li><img src="{{image}}" width="100px"><a href="{{url}}">{{title}}</a> <small>{{description}}</small> <strong>{{type}}</strong></li>
+		<div class="card {{year}}"><img src="{{image}}" width="100px"><a href="{{url}}">{{title}}</a> <small>{{description}}</small> <strong>{{type}}</strong></div>
 	{{/each}}
-</ul>
+
 </script>
 </head>
 
