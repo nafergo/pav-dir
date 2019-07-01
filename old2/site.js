@@ -44,6 +44,11 @@ var getList = {
   }
 }
 
+params.spreadsheetKey = '1zcf8HFaI2WesW-NkawO0g6pSrg4B8R5uH1l8oMI0K-I';
+params.pageTitle = 'teste';
+params.primaryColor = getParameterByName('primary-color');
+params.secondaryColor = getParameterByName('secondary-color');
+
 
 /*Get Params in URL
 function getParameterByName(name, url) {
