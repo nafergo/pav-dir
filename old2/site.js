@@ -204,22 +204,22 @@ function handleService(service, counter) {
     requiredInfoButtons = document.createElement('div');
     requiredInfoButtons.className = 'btn-group pull-right';
 
-    if(service['Telephone']){
-      requiredInfoButtons.innerHTML += '<a href="tel:' + service['Telephone'] + '" class="btn btn-default"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> ' + service['Telephone'] + '</a>';
+    if(service['Status']){
+      requiredInfoButtons.innerHTML += '<a href="#" class="btn btn-success"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Active</a>';
     } else {
-      requiredInfoButtons.innerHTML += '<a href="#" class="btn btn-default disabled"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> No Phone Listed</a>';
+      requiredInfoButtons.innerHTML += '<a href="#" class="btn btn-default disabled"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Inactive</a>';
     }
 
-    if(service['Address']){
-      requiredInfoButtons.innerHTML += '<a href="https://maps.google.com/?q=' + encodeURIComponent(service['Address']) + '" target="_blank" class="btn btn-default"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Directions</a>';
+    if(service['URL']){
+      requiredInfoButtons.innerHTML += '<a href="' + (service['URL']) + '" target="_blank" class="btn btn-default"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> WWW</a>';
     } else {
-      requiredInfoButtons.innerHTML += '<a href="#" class="btn btn-default disabled"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> No Address Listed</a>';
+      requiredInfoButtons.innerHTML += '<a href="#" class="btn btn-default disabled"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> No URL</a>';
     }
 
     requiredInfoButtons.innerHTML += showMoreButton;
 
-    serviceHeader.innerHTML = '<h1>' + service['Organization Name'] + '</h1>';
-    serviceHeader.innerHTML += '<p class="type">' + service['Type of Program'] + '</p>';
+    serviceHeader.innerHTML = '<h1>' + service['Name'] + '</h1>';
+    serviceHeader.innerHTML += '<p class="type">' + service['Type'] + '</p>';
     $(requiredInfo).append(serviceHeader);
     $(requiredInfo).append(requiredInfoButtons);
 

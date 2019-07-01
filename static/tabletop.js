@@ -40,9 +40,9 @@
     Initialize with Tabletop.init( { key: '0AjAPaAU9MeLFdHUxTlJiVVRYNGRJQnRmSnQwTlpoUXc' } )
       OR!
     Initialize with Tabletop.init( { key: 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0AjAPaAU9MeLFdHUxTlJiVVRYNGRJQnRmSnQwTlpoUXc&output=html&widget=true' } )
-      OR! */
+      OR!
     Initialize with Tabletop.init('1zcf8HFaI2WesW-NkawO0g6pSrg4B8R5uH1l8oMI0K-I')
-  
+  */
 
   var Tabletop = function(options) {
     // Make sure Tabletop is being used as a constructor no matter what.
