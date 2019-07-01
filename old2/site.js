@@ -29,7 +29,7 @@ function init() {
 var getList = {
   tabletop: function() {
     Tabletop.init({
-      key: '1zcf8HFaI2WesW-NkawO0g6pSrg4B8R5uH1l8oMI0K-I', // copy of live spreadsheet
+      key: 'https://docs.google.com/spreadsheets/d/1zcf8HFaI2WesW-NkawO0g6pSrg4B8R5uH1l8oMI0K-I/edit#gid=0', // copy of live spreadsheet
       callback: success
     });
   },
