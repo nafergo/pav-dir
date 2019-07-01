@@ -24,39 +24,6 @@ function init() {
   // getList.local();
 }
 
-//Determine device type for iOS or Android - used for mapping application link.
-function getMobileOperatingSystem() {
-  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-  if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) )
-  {
-    return 'iOS';
-  }
-  else if( userAgent.match( /Android/i ) )
-  {
-    return 'Android';
-  }
-  else
-  {
-    return 'unknown';
-  }
-}
-
-//Get Params in URL
-function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&").toLowerCase(); // This is just to avoid case sensitiveness for query parameter name
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
-params.spreadsheetKey = getParameterByName('key');
-params.pageTitle = getParameterByName('title');
-params.primaryColor = getParameterByName('primary-color');
-params.secondaryColor = getParameterByName('secondary-color');
 
 var getList = {
   tabletop: function() {
