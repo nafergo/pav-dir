@@ -25,8 +25,27 @@ function init() {
 }
 
 
+var getList = {
+  tabletop: function() {
+    Tabletop.init({
+      key: '1zcf8HFaI2WesW-NkawO0g6pSrg4B8R5uH1l8oMI0K-I', // copy of live spreadsheet
+      callback: success
+    });
+  },
+  local: function() {
+    $.ajax({
+      url: '../list.json',
+      dataType: 'json',
+      success: success,
+      error: function(err) {
+        console.error(err);
+      }
+    });
+  }
+}
 
-//Get Params in URL
+
+/*Get Params in URL
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&").toLowerCase(); // This is just to avoid case sensitiveness for query parameter name
