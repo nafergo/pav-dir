@@ -37,30 +37,12 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-params.spreadsheetKey = 'https://docs.google.com/spreadsheets/d/1zcf8HFaI2WesW-NkawO0g6pSrg4B8R5uH1l8oMI0K-I';
+params.spreadsheetKey = '1zcf8HFaI2WesW-NkawO0g6pSrg4B8R5uH1l8oMI0K-I';
 params.pageTitle = 'teste';
 params.primaryColor = getParameterByName('primary-color');
 params.secondaryColor = getParameterByName('secondary-color');
 
-var getList = {
-  tabletop: function() {
-    Tabletop.init({
-      key: '1zcf8HFaI2WesW-NkawO0g6pSrg4B8R5uH1l8oMI0K-I', // copy of live spreadsheet
-      //key: params.spreadsheetKey, // copy of live spreadsheet
-      callback: success
-    });
-  },
-  local: function() {
-    $.ajax({
-      url: '../list.json',
-      dataType: 'json',
-      success: success,
-      error: function(err) {
-        console.error(err);
-      }
-    });
-  }
-};
+
 
 /*
 callback function after the list data has
