@@ -42,7 +42,7 @@ params.primaryColor = getParameterByName('primary-color');
 params.secondaryColor = getParameterByName('secondary-color');
 
 
-var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQvAv7rSCuqp5p5NiVDilJp7_y8w8BGh01b2iXDoqRtiyEffSxYN0BVyWpyktnZ_7BbKkBvT6_hL_Yp/pubhtml';
+var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1zcf8HFaI2WesW-NkawO0g6pSrg4B8R5uH1l8oMI0K-I/edit?usp=sharing';
 
 var getList = {
   tabletop: function() {
