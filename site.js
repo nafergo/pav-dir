@@ -25,7 +25,7 @@ function init() {
 }
 
 
-/*Get Params in URL*/
+/*Get Params in URL
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&").toLowerCase(); // This is just to avoid case sensitiveness for query parameter name
@@ -40,9 +40,13 @@ params.spreadsheetKey = 'https://docs.google.com/spreadsheets/d/1zcf8HFaI2WesW-N
 params.pageTitle = 'teste';
 params.primaryColor = getParameterByName('primary-color');
 params.secondaryColor = getParameterByName('secondary-color');
+*/
 
+var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=1zcf8HFaI2WesW-NkawO0g6pSrg4B8R5uH1l8oMI0K-I&output=html';
 
-var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1zcf8HFaI2WesW-NkawO0g6pSrg4B8R5uH1l8oMI0K-I/edit?usp=sharing';
+//offline  https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=1zcf8HFaI2WesW-NkawO0g6pSrg4B8R5uH1l8oMI0K-I&output=html
+//nope  https://docs.google.com/spreadsheets/d/e/2PACX-1vQvAv7rSCuqp5p5NiVDilJp7_y8w8BGh01b2iXDoqRtiyEffSxYN0BVyWpyktnZ_7BbKkBvT6_hL_Yp/pubhtml
+//nope https://docs.google.com/spreadsheets/d/1zcf8HFaI2WesW-NkawO0g6pSrg4B8R5uH1l8oMI0K-I/edit?usp=sharing
 
 var getList = {
   tabletop: function() {
