@@ -55,7 +55,8 @@ function getParameterByName(name, url) {
 
 params.spreadsheetKey = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=1zcf8HFaI2WesW-NkawO0g6pSrg4B8R5uH1l8oMI0K-I&output=html';
 //params.spreadsheetKey = getParameterByName('key');
-params.pageTitle = getParameterByName('title');
+params.pageTitle = 'testeoutro';
+//params.pageTitle = getParameterByName('title');
 params.primaryColor = getParameterByName('primary-color');
 params.secondaryColor = getParameterByName('secondary-color');
 
