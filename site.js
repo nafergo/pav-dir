@@ -37,7 +37,7 @@ function getParameterByName(name, url) {
 }
 
 params.spreadsheetKey = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=1zcf8HFaI2WesW-NkawO0g6pSrg4B8R5uH1l8oMI0K-I&output=html';
-params.pageTitle = 'teste';
+params.pageTitle = 'D-PAV';
 params.primaryColor = getParameterByName('primary-color');
 params.secondaryColor = getParameterByName('secondary-color');
 
@@ -180,7 +180,7 @@ function handleService(service, counter) {
     var serviceHeader = document.createElement('div');
     var requiredInfo = document.createElement('div');
     var additionalInfo = document.createElement('div');
-    var showMoreButton = '<a data-toggle="collapse" class="btn btn-default more-info collapsed" data-target="#additional-services-' + counter + '"> Info</a>'
+    var showMoreButton = '<a data-toggle="collapse" class="btn btn-default more-info collapsed" data-target="#additional-services-' + counter + '"> </a>'
 
     serviceElem.className = 'service ' + sanitize(serviceType);
     serviceHeader.className = 'title col-md-6';
@@ -195,15 +195,15 @@ function handleService(service, counter) {
     requiredInfoButtons.className = 'btn-group pull-right';
 
     if(service['Status']){
-      requiredInfoButtons.innerHTML += '<a href="#" class="btn btn-success"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Active</a>';
+      requiredInfoButtons.innerHTML += '<a href="#" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Ativo</a>';
     } else {
-      requiredInfoButtons.innerHTML += '<a href="#" class="btn btn-default disabled"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Inactive</a>';
+      requiredInfoButtons.innerHTML += '<a href="#" class="btn btn-default disabled"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Inativo</a>';
     }
 
     if(service['URL']){
-      requiredInfoButtons.innerHTML += '<a href="' + (service['URL']) + '" target="_blank" class="btn btn-default"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> WWW</a>';
+      requiredInfoButtons.innerHTML += '<a href="' + (service['URL']) + '" target="_blank" class="btn btn-default"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> WWW</a>';
     } else {
-      requiredInfoButtons.innerHTML += '<a href="#" class="btn btn-default disabled"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> No URL</a>';
+      requiredInfoButtons.innerHTML += '<a href="#" class="btn btn-default disabled"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Sem URL</a>';
     }
 
     requiredInfoButtons.innerHTML += showMoreButton;
@@ -226,7 +226,7 @@ function handleService(service, counter) {
 function firstFilter() {
   var servicesFilterList = document.getElementById('services-filter');
   var all = document.createElement('button');
-  all.innerHTML = 'All';
+  all.innerHTML = 'Todas';
   all.className = 'service-filter btn active';
   all.setAttribute('data', 'all');
   all.setAttribute('type', 'button');

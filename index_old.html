@@ -22,67 +22,47 @@
     </head>
 
     <body>
-    <div id="service-list-wrapper">
-        
-<div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-2">
+
+        <div id="service-list-wrapper">
 
             <div class="sidebar">
             <!-- intro -->
-                <h1 class="title"></h1>   
-                <h4 class="subtitle">Diretório Software e Recursos do PAV</h4>
-                
+                <h1 class="title"></h1>
 
             <!-- search -->
                 <div id="search" class="input-group">
-                    <input type="text" class="form-control search typeahead" placeholder="Pesquisar" aria-describedby="sizing-addon2">
+                    <input type="text" class="form-control search typeahead" placeholder="Search" aria-describedby="sizing-addon2">
                 </div>
 
             <!-- filters -->
-                <span>Categorias:</span>
-                <div id="services-filter" role="group"></div>        
+                <span>Filter by category:</span>
+                <div id="services-filter" role="group"></div>
+                
+                
+                <div class="sidebar-footer col-md-10">
+
+                    
+<div class="row">
+  <div class="col-md-10">
+<a class="#" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                  <h4>PAV/CAJC 2019</h4>
+</a>
+<div class="collapse" id="collapseExample">
+  <div class="well">
+    Projeto loren iopsum loren ipsum etc etc loren
+  </div>
+</div>                    
+    
+    
+    </div>
+</div>                    
+                    
+                    
+                </div>
                 
             </div>
 
-
-                    
-            <!-- Large modal -->
-<a  class="sidebar-footer" data-toggle="modal" data-target=".bs-example-modal-lg"><h3>PAV 2019</h3></a>
-
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-<div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="gridSystemModalLabel">D-PAV</h4>
-      </div>
-      <div class="modal-body">
-  
-        <div class="row">
-          <div class="col-sm-9">
-            Diretório Software e Recursos do PAV
-            <div class="row">
-              <div class="col-xs-8 col-sm-6">
-                la la la
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-      </div>
-      </div>
-  </div>
-</div>
-    
-        
-            
-        </div>
-        <div class="col-sm-10">
-
+            <h1>Results</h1>
             <!-- services -->
             <ul id="services-list" class="list"></ul>
 
@@ -91,16 +71,13 @@
                 <i class="fa fa-refresh fa-spin"></i>
                 <p>Loading</p>
             </div>
-            
-       </div>
 
-    </div>
-</div>
-            
-    </div>
+        </div>
 
         
-      
+        <script>
+    $("[data-toggle='modal']").modal();
+</script>
         
     </body>
 </html>

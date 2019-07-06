@@ -34,31 +34,22 @@ SEARCH & FILTERS
 + + + + + + + + + + + */
 
 .sidebar {
-/*    position: fixed;
+    position: fixed;
     left: 0;
     width: 250px;
     top: 0;
     bottom: 0;
     background: #fff;
     padding: 1px 20px;
-    border-right: 1px solid #DADADA;*/
+    border-right: 1px solid #DADADA;
 }
 .sidebar .title {
     margin: -1px -20px 20px;
     background: #4776E6;
-    color: #fff; 
+    color: #fff;
     padding: 20px;
     min-height: 79px;
 }
-
-.sidebar .subtitle {
-    margin: -20px -20px 20px;
-    background: #4776E6;
-    color: #fff; 
-    padding: 20px;
-    min-height: 79px;
-}
-
 #search {
     margin: 0.5em 0;
     width: 100%;
@@ -121,9 +112,6 @@ SEARCH & FILTERS
     color: white;
 }
 
-.sidebar-footer {margin-bottom: 10px; position: fixed;   bottom: 0;}
-
-
 /* + + + + + + + + + + +
 
 SERVICE ITEMS
@@ -131,7 +119,7 @@ SERVICE ITEMS
 + + + + + + + + + + + */
 
 #services-list {
-    /*position: absolute;*/
+    position: absolute;
     left: 250px;
     margin: 0;
     top: 0;
@@ -149,12 +137,6 @@ SERVICE ITEMS
     border: 1px solid #DADADA;
 }
 .type {
-/*    font-size: 1em;
-    font-weight: 900;
-    color: #999; */
-}
-
-.type-sub {
     font-size: 1em;
     font-weight: 900;
     color: #999;
@@ -183,10 +165,10 @@ SERVICE ITEMS
 .service .contact {}
 .service .cost {}
 a.btn.btn-default.more-info.collapsed:before {
-content:"\e080";}
-
+    content: 'More'
+}
 a.btn.btn-default.more-info:before {
-content:"\e253";
+    content: 'Less'
 }
 
 /* + + + + + + + + + + +
