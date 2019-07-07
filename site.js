@@ -209,7 +209,7 @@ function handleService(service, counter) {
     requiredInfoButtons.innerHTML += showMoreButton;
 
     serviceHeader.innerHTML = '<h1>' + service['Name'] + '</h1>';
-    serviceHeader.innerHTML += '<p class="type">' + service['Tags'] + '</p>';
+    serviceHeader.innerHTML += '<p class="type">' + service['Type'] + '</p>';
     $(requiredInfo).append(serviceHeader);
     $(requiredInfo).append(requiredInfoButtons);
       
