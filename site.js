@@ -209,16 +209,17 @@ function handleService(service, counter) {
     requiredInfoButtons.innerHTML += showMoreButton;
 
     serviceHeader.innerHTML = '<h1>' + service['Name'] + '</h1>';
-    serviceHeader.innerHTML += '<p class="type">' + service['Type'] + '</p>';
+    serviceHeader.innerHTML += '<p class="type">' + service['Tags'] + '</p>';
     $(requiredInfo).append(serviceHeader);
     $(requiredInfo).append(requiredInfoButtons);
-
+      
     for (key in service) {
       if (service[key].length > 0 && key != 'Organization Name' && service[key] != 'N/A' && service[key] != 'N/a') {
         additionalInfo.innerHTML += '<p class="'+key+' col-md-12"><strong>' + key + '</strong><br>' + service[key] + '</p>';
       }
-    }
-
+    }      
+      
+      
     document.getElementById('services-list').appendChild(serviceElem);
   }
 }

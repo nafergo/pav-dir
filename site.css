@@ -183,10 +183,13 @@ SERVICE ITEMS
 .service .contact {}
 .service .cost {}
 a.btn.btn-default.more-info.collapsed:before {
-content:"\e080";}
+  content: "\e252"; /* glyphicon-triangle-bottom */
+  font-family: 'Glyphicons Halflings';
+}
 
 a.btn.btn-default.more-info:before {
 content:"\e253";
+ font-family: 'Glyphicons Halflings';
 }
 
 /* + + + + + + + + + + +
