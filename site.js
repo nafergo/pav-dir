@@ -213,11 +213,48 @@ function handleService(service, counter) {
     $(requiredInfo).append(serviceHeader);
     $(requiredInfo).append(requiredInfoButtons);
       
-    for (key in service) {
-      if (service[key].length > 0 && key != 'Organization Name' && service[key] != 'N/A' && service[key] != 'N/a') {
-        additionalInfo.innerHTML += '<p class="'+key+' col-md-12"><strong>' + key + '</strong><br>' + service[key] + '</p>';
-      }
-    }      
+//    for (key in service) {
+
+        if(service['Name']) {
+        additionalInfo.innerHTML += '<div class="name col-md-12 hidden-xs hidden-sm hidden-md hidden-lg"><strong>NAME</strong><p>' + service['Name'] + '</p></div>';
+    }        
+
+        if(service['Type']) {
+        additionalInfo.innerHTML += '<div class="name col-md-12 hidden-xs hidden-sm hidden-md hidden-lg"><strong>TYPE</strong><p>' + service['Type'] + '</p></div>';
+    }        
+
+        if(service['Tags']) {
+        additionalInfo.innerHTML += '<div class="name col-md-12"><strong>TAGS</strong><p>' + service['Tags'] + '</p></div>';
+    }        
+
+        if(service['URL']) {
+        additionalInfo.innerHTML += '<div class="name col-md-12"><strong>URL</strong><p><a href="' + (service['URL']) + '" target="_blank" class="">' + service['URL'] + '</a></p></div>';
+    }        
+
+        if(service['Description']) {
+        additionalInfo.innerHTML += '<div class="name col-md-12"><strong>DESCRIPTION</strong><p>' + service['Description'] + '</p></div>';
+    }        
+
+        if(service['Status']) {
+        additionalInfo.innerHTML += '<div class="name col-md-12 hidden-xs hidden-sm hidden-md hidden-lg"><strong>STATUS</strong><p>' + service['Status'] + '</p></div>';
+    }        
+
+        if(service['OS']) {
+        additionalInfo.innerHTML += '<div class="name col-md-12"><strong>OPERATING SYSTEM</strong><p>' + service['OS'] + '</p></div>';
+    }        
+
+        if(service['Latest release']) {
+        additionalInfo.innerHTML += '<div class="name col-md-12"><strong>LATEST RELEASE</strong><p>' + service['Latest release'] + '</p></div>';
+    }        
+
+        
+        
+        
+//      if (service[key].length > 0 && key != 'Organization Name' && service[key] != 'N/A' && service[key] != 'N/a') {
+//        additionalInfo.innerHTML += '<p class="'+key+' col-md-12"><strong>' + key + '</strong><br>' + service[key] + '</p>';
+//      }        
+        
+//    }      
       
       
     document.getElementById('services-list').appendChild(serviceElem);
