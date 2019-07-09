@@ -210,7 +210,7 @@ function handleService(service, counter) {
 
     serviceHeader.innerHTML = '<h1>' + service['Name'] + '</h1>';
     serviceHeader.innerHTML += '<p class="type">' + service['Type'] + '</p>';
-    serviceHeader.innerHTML += '<p class="tagsheader"><em>' + service['Tags'] + '</em></p><br>';      
+    serviceHeader.innerHTML += '<p class="text-uppercase"><small>' + service['Tags'] + '</small></p><br>';      
     $(requiredInfo).append(serviceHeader);
     $(requiredInfo).append(requiredInfoButtons);
       
@@ -225,17 +225,17 @@ function handleService(service, counter) {
     }        
 
         if(service['Tags']) {
-        additionalInfo.innerHTML += '<div class="name col-md-12"><strong>TAGS</strong><p>' + service['Tags'] + '</p></div>';
-    }        
-
-        if(service['URL']) {
-        additionalInfo.innerHTML += '<div class="name col-md-12"><strong>URL</strong><p><a href="' + (service['URL']) + '" target="_blank" class="">' + service['URL'] + '</a></p></div>';
+        additionalInfo.innerHTML += '<div class="name col-md-12 hidden-xs hidden-sm hidden-md hidden-lg"><strong>TAGS</strong><p>' + service['Tags'] + '</p></div>';
     }        
 
         if(service['Description']) {
         additionalInfo.innerHTML += '<div class="name col-md-12"><strong>DESCRIPTION</strong><p>' + service['Description'] + '</p></div>';
     }        
-
+      
+        if(service['URL']) {
+        additionalInfo.innerHTML += '<div class="name col-md-12"><strong>URL</strong><p><a href="' + (service['URL']) + '" target="_blank" class="">' + service['URL'] + '</a></p></div>';
+    }        
+      
         if(service['Status']) {
         additionalInfo.innerHTML += '<div class="name col-md-12 hidden-xs hidden-sm hidden-md hidden-lg"><strong>STATUS</strong><p>' + service['Status'] + '</p></div>';
     }        
