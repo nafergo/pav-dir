@@ -231,6 +231,10 @@ function handleService(service, counter) {
         if(service['Description']) {
         additionalInfo.innerHTML += '<div class="name col-md-12"><strong>DESCRIPTION</strong><p>' + service['Description'] + '</p></div>';
     }        
+
+        if(service['Image']) {
+        additionalInfo.innerHTML += '<div class="name col-md-12"><strong></strong><p><img src="' + (service['Image']) + '" class="image_service"></p></div>';
+    }              
       
         if(service['URL']) {
         additionalInfo.innerHTML += '<div class="name col-md-12"><strong>URL</strong><p><a href="' + (service['URL']) + '" target="_blank" class="">' + service['URL'] + '</a></p></div>';
